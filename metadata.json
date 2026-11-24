@@ -1,0 +1,6 @@
+{
+  "name": "T-REX TATTOOS & PIERCING",
+  "description": "Premier custom tattoo and sterile piercing studio led by Lead Artist Nithin Raj. Open 24/7, Monday through Sunday, with tattoos starting at ₹800 and piercings from ₹500.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
