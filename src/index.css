@@ -47,3 +47,60 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+@keyframes border-glow-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.artist-glow-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220%;
+  aspect-ratio: 1 / 1;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(200, 160, 75, 0.08) 60deg,
+    #c8a04b 125deg,
+    #f5e1a4 150deg,
+    #c8a04b 175deg,
+    rgba(200, 160, 75, 0.08) 240deg,
+    transparent 360deg
+  );
+  animation: border-glow-spin 6.5s linear infinite;
+  will-change: transform;
+}
+
+.portrait-glow-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220%;
+  aspect-ratio: 1 / 1;
+  background: conic-gradient(
+    from 180deg,
+    transparent 0deg,
+    rgba(200, 160, 75, 0.1) 60deg,
+    #c8a04b 130deg,
+    #f5e1a4 155deg,
+    #c8a04b 180deg,
+    rgba(200, 160, 75, 0.1) 245deg,
+    transparent 360deg
+  );
+  animation: border-glow-spin 8s linear infinite reverse;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artist-glow-ring,
+  .portrait-glow-ring {
+    animation: none;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}

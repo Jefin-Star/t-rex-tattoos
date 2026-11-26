@@ -38,15 +38,16 @@ export const STUDIO_CONFIG = {
     'Experience top-tier artistry with Lead Artist Nithin Raj, bringing over five years of professional expertise. Our studio is open 24/7, Monday through Sunday, offering tattoos starting at ₹800 and piercings from ₹500.',
   leadArtist: {
     name: 'Nithin Raj',
-    role: 'Lead Tattoo Artist & Founder',
+    role: 'Master Tattoo Artist & Founder',
     experience: '5+ Years Experience',
+    portraitUrl: '/assets/aistudio/aca1eb79-e05e-4acf-bfdb-5ef32875b5bd_a002dd5e.jpg',
     specialties: [
       'Black & Grey Realism',
       'Micro-Realism & 3D',
       'Custom Illustrative Sleeves',
       'Sterile Body Piercings',
     ],
-    bio: 'With over five years of dedicated studio practice, Nithin Raj blends anatomical flow with sharp technical precision—guiding every client from initial concept sketch to healed permanence.',
+    bio: 'Bringing over 5 years of professional tattooing expertise—blending razor-sharp anatomical flow, rich monochrome depth, and bespoke custom artistry from initial sketch to healed permanence.',
   },
   hours: {
     label: 'Open 24/7',
@@ -139,6 +140,34 @@ export const STUDIO_CONFIG = {
 };
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
+  {
+    id: 'theyyam-crown-stone-portrait',
+    title: 'Theyyam Crown & Stone-Weathered Gaze',
+    category: 'Black & Grey',
+    artist: 'Nithin Raj',
+    placement: 'Forearm',
+    duration: '6.5 Hours · Single Session',
+    inkPalette: 'Triple-Black Pigment, Grey Wash & Crisp White Highlights',
+    description:
+      'Monumental black-and-grey realism portrait of a traditional Kerala ritual performer crowned in a multi-tiered metallic headdress and beaded collar. Subtle stone-crack facial textures and deep obsidian shading bring sculptural depth across the forearm.',
+    tags: ['Theyyam Portrait', 'Black & Grey Realism', 'Ornate Crown', 'Forearm Piece', 'High Contrast'],
+    image: '/assets/aistudio/90f196d4-3afe-4822-9c99-74c969facc04_351ebdc2.jpg',
+    isAiAnalyzed: true,
+  },
+  {
+    id: 'gilded-helix-ear-constellation',
+    title: 'Gilded Helix & Cascade Ear Constellation',
+    category: 'Body Piercing',
+    artist: 'Studio Piercing Team',
+    placement: 'Vertical Helix, Outer Rim & Lobe',
+    duration: '35 Mins · Sterile Procedure',
+    inkPalette: 'Gold-Tone Implant Jewelry & Faceted Crystal Clusters',
+    description:
+      'Meticulously mapped multi-point ear curation uniting a vertical helix floral barbell with graduated crystal cartilage studs along the outer rim and gold jhumka lobe drops. Balanced for crisp anatomical spacing and low-trauma healing.',
+    tags: ['Vertical Helix', 'Curated Ear', 'Gold & Crystal', 'Cartilage Stack', 'Lobe Styling'],
+    image: '/assets/aistudio/01a75bb8-02c7-472f-bc9a-72af56462ec5_8e0495a0.jpg',
+    isAiAnalyzed: true,
+  },
   {
     id: 'black-widow-3d-wrist',
     title: '3D Black Widow & Cast Web',

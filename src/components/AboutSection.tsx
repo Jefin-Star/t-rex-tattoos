@@ -1,4 +1,5 @@
 import { STUDIO_CONFIG } from '../data/studioConfig';
+import { ArtistProfileCard } from './ArtistProfileCard';
 
 export function AboutSection() {
   return (
@@ -17,34 +18,13 @@ export function AboutSection() {
           </p>
         </div>
 
-        {/* 2-Column Editorial Split: Lead Artist & Pricing vs Studio Standards */}
+        {/* Featured 2-Column Master Artist Profile Showcase */}
+        <ArtistProfileCard />
+
+        {/* 2-Column Editorial Split: Pricing vs Studio Standards */}
         <div className="mt-14 grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
-          {/* Left Column: Artist Profile + Transparent Starting Pricing */}
+          {/* Left Column: Transparent Starting Pricing */}
           <div className="space-y-8 lg:col-span-5">
-            <div className="rounded-2xl border border-white/10 bg-[#101012] p-6 sm:p-8">
-              <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
-                <div>
-                  <h3 className="font-display text-xl font-bold text-[#F5F2EB]">
-                    {STUDIO_CONFIG.leadArtist.name}
-                  </h3>
-                  <p className="mt-1 text-xs font-medium text-[#A19E95]">
-                    {STUDIO_CONFIG.leadArtist.role} · {STUDIO_CONFIG.leadArtist.experience}
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-5 text-sm leading-relaxed text-[#C7C3B9]">
-                {STUDIO_CONFIG.leadArtist.bio}
-              </p>
-
-              <div className="mt-6 border-t border-white/10 pt-5">
-                <p className="text-xs font-medium text-[#A19E95]">Core Disciplines</p>
-                <p className="mt-2 text-sm text-[#F5F2EB]">
-                  {STUDIO_CONFIG.leadArtist.specialties.join(' · ')}
-                </p>
-              </div>
-            </div>
-
             {/* Transparent Starting Rates */}
             <div className="rounded-2xl border border-white/10 bg-[#101012] p-6 sm:p-8">
               <h3 className="font-display text-lg font-bold text-[#F5F2EB]">

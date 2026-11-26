@@ -302,103 +302,15 @@ export function PortfolioSection({ onSelectForBooking }: PortfolioSectionProps) 
   return (
     <section id="portfolio" className="border-b border-white/10 bg-[#08080A]">
       <div className="mx-auto max-w-[1280px] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-        {/* Section Heading & Automatic Vision AI Dropzone */}
-        <div className="grid grid-cols-1 items-end gap-8 border-b border-white/10 pb-10 lg:grid-cols-12">
-          <div className="lg:col-span-6">
+        {/* Section Heading */}
+        <div className="border-b border-white/10 pb-8">
+          <div className="max-w-2xl">
             <p className="text-xs font-semibold tracking-[0.16em] text-[#C8A04B] uppercase">
               Portfolio &amp; Vision AI Curator
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#F5F2EB] sm:text-4xl text-balance">
               Layered Studio Archive
             </h2>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#A19E95] sm:text-base">
-              Scroll through recent ink and piercing work below. Upload your own tattoo photo or reference to let our Vision AI automatically identify style, placement, tags, and studio captions—then seamlessly insert it into the sticky gallery.
-            </p>
-          </div>
-
-          {/* Automatic Vision AI Upload Dropzone */}
-          <div className="lg:col-span-6">
-            <div
-              onDragOver={(e) => {
-                e.preventDefault();
-                setIsDragging(true);
-              }}
-              onDragLeave={() => setIsDragging(false)}
-              onDrop={handleDrop}
-              className={`rounded-2xl border border-dashed p-5 transition-colors duration-150 ${
-                isDragging
-                  ? 'border-[#C8A04B] bg-[#C8A04B]/10'
-                  : 'border-white/20 bg-[#101012] hover:border-[#C8A04B]/60'
-              }`}
-            >
-              {analyzingName ? (
-                <div className="flex items-center gap-4 py-2">
-                  <Loader2 className="h-6 w-6 shrink-0 animate-spin text-[#C8A04B]" />
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold text-[#F5F2EB]">
-                      Vision AI analyzing "{analyzingName}"...
-                    </p>
-                    <p className="mt-0.5 text-xs text-[#A19E95]">
-                      Identifying style, motifs, anatomical placement, and generating gallery tags.
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-                  <div className="flex items-start gap-3.5">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#C8A04B]/30 bg-[#08080A] text-[#C8A04B]">
-                      <Upload className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-[#F5F2EB]">
-                        Upload Tattoo for Instant Vision AI Tagging
-                      </p>
-                      <p className="mt-0.5 text-xs text-[#A19E95]">
-                        Drop JPG, PNG, or WEBP here—automatically analyzed and added to the gallery.
-                      </p>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => fileInputRef.current?.click()}
-                    className="inline-flex min-h-[40px] shrink-0 items-center gap-2 rounded-lg bg-[#C8A04B] px-4 py-2 text-xs font-semibold text-[#060607] transition-colors hover:bg-[#D8B25D] whitespace-nowrap"
-                  >
-                    <Sparkles className="h-3.5 w-3.5" />
-                    <span>Upload &amp; Analyze</span>
-                  </button>
-                </div>
-              )}
-
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/*"
-                multiple
-                onChange={handleFileChange}
-                className="sr-only"
-                aria-label="Upload tattoo image for automatic Vision AI analysis"
-              />
-            </div>
-
-            {aiError && (
-              <div
-                role="alert"
-                className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-rose-500/30 bg-rose-950/30 px-4 py-2.5 text-xs text-rose-300"
-              >
-                <div className="flex items-center gap-2">
-                  <AlertCircle className="h-4 w-4 shrink-0" />
-                  <span>{aiError}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setAiError(null)}
-                  aria-label="Dismiss error"
-                  className="text-rose-300/80 hover:text-rose-200"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              </div>
-            )}
           </div>
         </div>
 
